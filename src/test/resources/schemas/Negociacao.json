@@ -1,0 +1,436 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "items": [
+        {
+          "dtContract": "2021-04-30",
+          "cdOperationContract": 474861,
+          "cdOperationCip": "1000000517757367557",
+          "cdTypeAgendaFidic": 2,
+          "cdTypeHeadline": "J",
+          "dtExpectedSaleOff": "2021-04-30",
+          "nuCpfCnpjTitular": "85008288",
+          "nuEC": 2005190360,
+          "vlAverageTermDC": 33.98,
+          "vlAverageTermDU": 23.49,
+          "vlNominalFee": 2.4,
+          "vlTotalContract": 6138.44,
+          "vlDescContract": -166.86,
+          "vlNetContract": 5971.58,
+          "nuPaymentGroup": 3486313,
+          "nuCommercialGroup": 3262731
+        }
+      ],
+      "summary": {
+        "totalQuantity": 1,
+        "totalAmount": 6138.44,
+        "totalNetAmount": 5971.58
+      },
+      "pagination": {
+        "pageNumber": 1,
+        "pageSize": 10,
+        "totalElements": 1,
+        "numPages": 1,
+        "firstPage": true,
+        "lastPage": true
+      }
+    }
+  ],
+  "required": [
+    "items",
+    "summary",
+    "pagination"
+  ],
+  "properties": {
+    "items": {
+      "$id": "#/properties/items",
+      "type": "array",
+      "title": "The items schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "dtContract": "2021-04-30",
+            "cdOperationContract": 474861,
+            "cdOperationCip": "1000000517757367557",
+            "cdTypeAgendaFidic": 2,
+            "cdTypeHeadline": "J",
+            "dtExpectedSaleOff": "2021-04-30",
+            "nuCpfCnpjTitular": "85008288",
+            "nuEC": 2005190360,
+            "vlAverageTermDC": 33.98,
+            "vlAverageTermDU": 23.49,
+            "vlNominalFee": 2.4,
+            "vlTotalContract": 6138.44,
+            "vlDescContract": -166.86,
+            "vlNetContract": 5971.58,
+            "nuPaymentGroup": 3486313,
+            "nuCommercialGroup": 3262731
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/items/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/items/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "dtContract": "2021-04-30",
+                "cdOperationContract": 474861,
+                "cdOperationCip": "1000000517757367557",
+                "cdTypeAgendaFidic": 2,
+                "cdTypeHeadline": "J",
+                "dtExpectedSaleOff": "2021-04-30",
+                "nuCpfCnpjTitular": "85008288",
+                "nuEC": 2005190360,
+                "vlAverageTermDC": 33.98,
+                "vlAverageTermDU": 23.49,
+                "vlNominalFee": 2.4,
+                "vlTotalContract": 6138.44,
+                "vlDescContract": -166.86,
+                "vlNetContract": 5971.58,
+                "nuPaymentGroup": 3486313,
+                "nuCommercialGroup": 3262731
+              }
+            ],
+            "required": [
+              "dtContract",
+              "cdOperationContract",
+              "cdOperationCip",
+              "cdTypeAgendaFidic",
+              "cdTypeHeadline",
+              "dtExpectedSaleOff",
+              "nuCpfCnpjTitular",
+              "nuEC",
+              "vlAverageTermDC",
+              "vlAverageTermDU",
+              "vlNominalFee",
+              "vlTotalContract",
+              "vlDescContract",
+              "vlNetContract",
+              "nuPaymentGroup",
+              "nuCommercialGroup"
+            ],
+            "properties": {
+              "dtContract": {
+                "$id": "#/properties/items/items/anyOf/0/properties/dtContract",
+                "type": "string",
+                "title": "The dtContract schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "2021-04-30"
+                ]
+              },
+              "cdOperationContract": {
+                "$id": "#/properties/items/items/anyOf/0/properties/cdOperationContract",
+                "type": "integer",
+                "title": "The cdOperationContract schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  474861
+                ]
+              },
+              "cdOperationCip": {
+                "$id": "#/properties/items/items/anyOf/0/properties/cdOperationCip",
+                "type": "string",
+                "title": "The cdOperationCip schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "1000000517757367557"
+                ]
+              },
+              "cdTypeAgendaFidic": {
+                "$id": "#/properties/items/items/anyOf/0/properties/cdTypeAgendaFidic",
+                "type": "integer",
+                "title": "The cdTypeAgendaFidic schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  2
+                ]
+              },
+              "cdTypeHeadline": {
+                "$id": "#/properties/items/items/anyOf/0/properties/cdTypeHeadline",
+                "type": "string",
+                "title": "The cdTypeHeadline schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "J"
+                ]
+              },
+              "dtExpectedSaleOff": {
+                "$id": "#/properties/items/items/anyOf/0/properties/dtExpectedSaleOff",
+                "type": "string",
+                "title": "The dtExpectedSaleOff schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "2021-04-30"
+                ]
+              },
+              "nuCpfCnpjTitular": {
+                "$id": "#/properties/items/items/anyOf/0/properties/nuCpfCnpjTitular",
+                "type": "string",
+                "title": "The nuCpfCnpjTitular schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "85008288"
+                ]
+              },
+              "nuEC": {
+                "$id": "#/properties/items/items/anyOf/0/properties/nuEC",
+                "type": "integer",
+                "title": "The nuEC schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  2005190360
+                ]
+              },
+              "vlAverageTermDC": {
+                "$id": "#/properties/items/items/anyOf/0/properties/vlAverageTermDC",
+                "type": "number",
+                "title": "The vlAverageTermDC schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0.0,
+                "examples": [
+                  33.98
+                ]
+              },
+              "vlAverageTermDU": {
+                "$id": "#/properties/items/items/anyOf/0/properties/vlAverageTermDU",
+                "type": "number",
+                "title": "The vlAverageTermDU schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0.0,
+                "examples": [
+                  23.49
+                ]
+              },
+              "vlNominalFee": {
+                "$id": "#/properties/items/items/anyOf/0/properties/vlNominalFee",
+                "type": "number",
+                "title": "The vlNominalFee schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0.0,
+                "examples": [
+                  2.4
+                ]
+              },
+              "vlTotalContract": {
+                "$id": "#/properties/items/items/anyOf/0/properties/vlTotalContract",
+                "type": "number",
+                "title": "The vlTotalContract schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0.0,
+                "examples": [
+                  6138.44
+                ]
+              },
+              "vlDescContract": {
+                "$id": "#/properties/items/items/anyOf/0/properties/vlDescContract",
+                "type": "number",
+                "title": "The vlDescContract schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0.0,
+                "examples": [
+                  -166.86
+                ]
+              },
+              "vlNetContract": {
+                "$id": "#/properties/items/items/anyOf/0/properties/vlNetContract",
+                "type": "number",
+                "title": "The vlNetContract schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0.0,
+                "examples": [
+                  5971.58
+                ]
+              },
+              "nuPaymentGroup": {
+                "$id": "#/properties/items/items/anyOf/0/properties/nuPaymentGroup",
+                "type": "integer",
+                "title": "The nuPaymentGroup schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  3486313
+                ]
+              },
+              "nuCommercialGroup": {
+                "$id": "#/properties/items/items/anyOf/0/properties/nuCommercialGroup",
+                "type": "integer",
+                "title": "The nuCommercialGroup schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  3262731
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "summary": {
+      "$id": "#/properties/summary",
+      "type": "object",
+      "title": "The summary schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "totalQuantity": 1,
+          "totalAmount": 6138.44,
+          "totalNetAmount": 5971.58
+        }
+      ],
+      "required": [
+        "totalQuantity",
+        "totalAmount",
+        "totalNetAmount"
+      ],
+      "properties": {
+        "totalQuantity": {
+          "$id": "#/properties/summary/properties/totalQuantity",
+          "type": "integer",
+          "title": "The totalQuantity schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "totalAmount": {
+          "$id": "#/properties/summary/properties/totalAmount",
+          "type": "number",
+          "title": "The totalAmount schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            6138.44
+          ]
+        },
+        "totalNetAmount": {
+          "$id": "#/properties/summary/properties/totalNetAmount",
+          "type": "number",
+          "title": "The totalNetAmount schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            5971.58
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "pagination": {
+      "$id": "#/properties/pagination",
+      "type": "object",
+      "title": "The pagination schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "pageNumber": 1,
+          "pageSize": 10,
+          "totalElements": 1,
+          "numPages": 1,
+          "firstPage": true,
+          "lastPage": true
+        }
+      ],
+      "required": [
+        "pageNumber",
+        "pageSize",
+        "totalElements",
+        "numPages",
+        "firstPage",
+        "lastPage"
+      ],
+      "properties": {
+        "pageNumber": {
+          "$id": "#/properties/pagination/properties/pageNumber",
+          "type": "integer",
+          "title": "The pageNumber schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "pageSize": {
+          "$id": "#/properties/pagination/properties/pageSize",
+          "type": "integer",
+          "title": "The pageSize schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            10
+          ]
+        },
+        "totalElements": {
+          "$id": "#/properties/pagination/properties/totalElements",
+          "type": "integer",
+          "title": "The totalElements schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "numPages": {
+          "$id": "#/properties/pagination/properties/numPages",
+          "type": "integer",
+          "title": "The numPages schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "firstPage": {
+          "$id": "#/properties/pagination/properties/firstPage",
+          "type": "boolean",
+          "title": "The firstPage schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "lastPage": {
+          "$id": "#/properties/pagination/properties/lastPage",
+          "type": "boolean",
+          "title": "The lastPage schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
