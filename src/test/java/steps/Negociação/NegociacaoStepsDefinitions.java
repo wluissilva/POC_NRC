@@ -22,8 +22,8 @@ public class NegociacaoStepsDefinitions {
                 .header("nuEC", "2005190360")
                 .queryParam("cdOperationContract", "474861")
                 .queryParam("startDate", "2021-04-24")
-                .queryParam("endDate", "2021-04-30")
-                .log().all();
+                .queryParam("endDate", "2021-04-30");
+
     }
 
     @Quando("eu realizar uma consulta desta operação")
@@ -34,28 +34,27 @@ public class NegociacaoStepsDefinitions {
     }
     @Entao("os dados da operação devem ser exibidos")
     public void osDadosDaOperaçãoDevemSerExibidos() {
-        response
-            .then()
-                .assertThat()
+    response
+        .then()
+            .assertThat()
                 .statusCode(HttpStatus.SC_OK)
-                .body("items[0].cdOperationContract", is(474861))
-                .body("items[0].nuCpfCnpjTitular", is("85008288"));
-
+                    .body("items[0].cdOperationContract", is(474861))
+                    .body("items[0].nuCpfCnpjTitular", is("85008288"));
     }
 
     @Entao("deve ser retornado o status code duzentos")
     public void deveSerRetornadoOStatusCodeDuzentos() {
         response
-                .then()
+            .then()
                 .assertThat()
-                .statusCode(HttpStatus.SC_OK);
+                    .statusCode(HttpStatus.SC_OK);
     }
 
     @Entao("os dados do contrato foram retornados com sucesso")
     public void osDadosDoContratoForamRetornadosComSucesso() {
         response
                 .then()
-                .assertThat()
-                .body(matchesJsonSchemaInClasspath("schemas/Negociacao.json"));
+                    .assertThat()
+                        .body(matchesJsonSchemaInClasspath("schemas/Negociacao.json"));
     }
 }
