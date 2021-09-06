@@ -1,0 +1,1 @@
+{"uuid":"0a41cae0-dcca-4d2e-b164-474a77a76624","name":"Cenario: Consultar Operação","children":["9e9dea39-d819-4dcf-92d8-756dd6ed2a7f"],"befores":[{"name":"steps.setup.BaseTest.setup()","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1629580149498,"stop":1629580149503}],"afters":[],"links":[],"start":1629580149498,"stop":1629580150970}

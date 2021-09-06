@@ -24,11 +24,6 @@ public class NegociacaoStepsDefinitions {
         negociacaoApi.realizarConsultaDaOperacao();
     }
 
-    @Entao("os dados da operação devem ser exibidos")
-    public void osDadosDaOperaçãoDevemSerExibidos() {
-
-        negociacaoApi.validarInformaçõesDeNegociacao();
-    }
 
     @Entao("deve ser retornado o status code duzentos")
     public void deveSerRetornadoOStatusCodeDuzentos() {
@@ -39,7 +34,7 @@ public class NegociacaoStepsDefinitions {
     @Entao("os dados do contrato foram retornados com sucesso")
     public void osDadosDoContratoForamRetornadosComSucesso() {
 
-       negociacaoApi.validarContratonegociacao();
+       negociacaoApi.validarContratoNegociacao();
     }
 
     @Dado("que existe uma operação com os dados {string}, {string}, {string}, {string}")
@@ -47,5 +42,10 @@ public class NegociacaoStepsDefinitions {
         negociacaoApi  = new NegociacaoApi();
         negociacaoApi.prepararDadosDaOperacaoParametrizado(nuEc,nuOperacao,dataInicio, dataFim);
 
+    }
+
+    @Entao("os dados da operação devem ser exibidos {}")
+    public void osDadosDaOperaçãoDevemSerExibidos(Integer nuOperacao) {
+        negociacaoApi.validarInformaçõesDeNegociacao(nuOperacao);
     }
 }

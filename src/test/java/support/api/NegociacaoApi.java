@@ -22,19 +22,19 @@ public class NegociacaoApi {
                         .get("/operation");
     }
 
-    public void validarContratonegociacao(){
+    public void validarContratoNegociacao(){
         response
                 .then()
                 .assertThat()
                 .body(matchesJsonSchemaInClasspath("schemas/Negociacao.json"));
     }
 
-    public void validarInformaçõesDeNegociacao(){
+    public void validarInformaçõesDeNegociacao(Integer nuOperacao){
         response
                 .then()
                 .assertThat()
                 .statusCode(HttpStatus.SC_OK)
-                .body("items[0].cdOperationContract", is(474861));
+                .body("items[0].cdOperationContract", is(nuOperacao));
 
     }
 
