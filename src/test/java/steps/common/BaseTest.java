@@ -1,7 +1,7 @@
-package steps.setup;
+package steps.common;
+import io.cucumber.java.Before;
 import io.restassured.RestAssured;
 
-import io.cucumber.java.Before;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;

@@ -1,4 +1,4 @@
-package steps.setup;
+package steps.common;
 
 import io.restassured.http.ContentType;
 

@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features/",
-        glue = "steps",
-        plugin = {"pretty","io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm"},
+        glue = {"steps"},
+        plugin = {"pretty","io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm","html:Reporter/reporter.html"},
         monochrome = false,
         tags = "@saude or @funcional or @contrato",
         dryRun = false,
